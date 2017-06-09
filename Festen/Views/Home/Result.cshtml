@@ -1,0 +1,27 @@
+﻿@using Festen.Models;
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model IEnumerable<Participant>
+
+<div class="container" id="missionsContainer">
+    <h2>Resultat</h2>
+    <h3>Who da winner!</h3>
+    <div class="table-responsive">
+        <table class="table-striped" id="resultTable">
+            <thead>
+                <tr>
+                    <th>Namn</th>
+                    <th>Utförda uppdrag</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var p in Model)
+                {
+                   <tr>
+                       <td>@p.Firstname @p.Lastname</td>
+                       <td>@p.CompletedMissions</td>
+                   </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

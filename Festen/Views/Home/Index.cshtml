@@ -1,0 +1,265 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@using Festen.Models;
+@model Participant
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="StyleSheet.css" rel="stylesheet" />
+    <title>30 års fest på schlätta</title>
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">30Årsskiva på Schlätta</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active" id="home"><a href="#">Home</a></li>
+                <li id="missions"><a href="#">Uppdrag</a></li>
+                <li id="us"><a href="#">Vi</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container" id="homeContainer">
+        <h1>Välkomna till årets händelse på schlätta!</h1>
+        <p>
+            Många av er är härifrån och har fått uppleva Falköping på nära håll mer eller mindre hela era liv.
+            En del av er är gäster från långväga håll och andra mindre långväga men som aldrig haft turen att spendera tid i vår vackra stad.
+            Vissa kan ha haft turen att se vår vackra tågstation på väg till Stockholm eller Göteborg eller stannat till på McDonalds på väg mot tristare destinationer.
+            Men nu är det dags! Ni ska äntligen få uppleva Falköping och det vi har att erbjuda. Hoppas ni alla kommer njuta av tillställningen lika mycket som vi.
+        </p>
+    </div>
+
+    <div class="container" id="missionsContainer">
+        <h2>Uppdrag</h2>
+        <h3>One mission to rule them all</h3>
+        <div class="table-responsive">
+            <table class="table-striped" id="missionsTable">
+                <thead>
+                    <tr>
+                        <th class="missionTD">Uppdrag</th>
+                        <th class="complete">Avklarat</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="missionTd">Ta en "Älgfie"</td>
+                        <td class="complete"><input type="checkbox" class="missionCompleted" /></td>
+                    </tr>
+                    <tr>
+                        <td class="missionTd">Ta en selfie med någon som kommer från Hälsingland</td>
+                        <td class="complete"><input type="checkbox" class="missionCompleted" /></td>
+                    </tr>
+                    <tr>
+                        <td class="missionTd"> Ta kort med någon som jobbat på Osten, Arkivator eller Falköpings mejeri i minst 2 år</td>
+                        <td class="complete"><input type="checkbox" class="missionCompleted" /></td>
+                    </tr>
+                    <tr>
+                        <td class="missionTd">Ta en bild med minst 5 pers som gått på ållebergs fotbollsgymnasie</td>
+                        <td class="complete"><input type="checkbox" class="missionCompleted" /></td>
+                    </tr>
+                    <tr>
+                        <td class="missionTd">Ta kort med en tidaholmare (hoppas att det inte kommer nån)</td>
+                        <td class="complete"><input type="checkbox" class="missionCompleted" /></td>
+                    </tr>
+                    <tr>
+                        <td class="missionTd"> Sjung duett på valfri pipex sång med någon som du inte känner</td>
+                        <td class="complete"><input type="checkbox" class="missionCompleted" /></td>
+                    </tr>
+                    <tr>
+                        <td class="missionTd"> Skriv upp 6 klassiska smeknamn på fotbollsspelare från Valtorp</td>
+                        <td class="complete"><input type="checkbox" class="missionCompleted" /></td>
+                    </tr>
+                    <tr>
+                        <td class="missionTd"> Sjung siahamba eller gör arabiska tanten</td>
+                        <td class="complete"><input type="checkbox" class="missionCompleted" /></td>
+                    </tr>
+                    <tr>
+                        <td class="missionTd">Ta kort med någon som har bott i Asien</td>
+                        <td class="complete"><input type="checkbox" class="missionCompleted" /></td>
+                    </tr>
+                    <tr>
+                        <td class="missionTd">Håll ett hyllningstal och skåla för valfri jubilar</td>
+                        <td class="complete"><input type="checkbox" class="missionCompleted" /></td>
+                    </tr>
+                    <tr>
+                        <td class="missionTd">Ta kort med 3 personer som någon gång spelat i Trollflöjten</td>
+                        <td class="complete"><input type="checkbox" class="missionCompleted" /></td>
+                    </tr>
+                    <tr>
+                        <td class="missionTd">Ta en bild med merra och berra</td>
+                        <td class="complete"><input type="checkbox" class="missionCompleted" /></td>
+                    </tr>
+                    <tr>
+                        <td class="missionTd">Gör ett hole in one på fotbollsgolfen</td>
+                        <td class="complete"><input type="checkbox" class="missionCompleted" /></td>
+                    </tr>
+                    <tr>
+                        <td class="missionTd">Ge Leena Green en kram</td>
+                        <td class="complete"><input type="checkbox" class="missionCompleted" /></td>
+                    </tr>
+                    <tr>
+                        <td class="missionTd">Skapa en sittring med minst 10 personer</td>
+                        <td class="complete"><input type="checkbox" class="missionCompleted" /></td>
+                    </tr>
+                    <tr>
+                        <td class="missionTd">Svep en öl</td>
+                        <td class="complete"><input type="checkbox" class="missionCompleted" /></td>
+                    </tr>
+                    <tr>
+                        <td class="missionTd">Bilda siffran 30 som formation med valfritt antal kroppar</td>
+                        <td class="complete"><input type="checkbox" class="missionCompleted" /></td>
+                    </tr>
+                    <tr>
+                        <td class="missionTd">Filma en person som pratar ryska</td>
+                        <td class="complete"><input type="checkbox" class="missionCompleted" /></td>
+                    </tr>
+                    <tr>
+                        <td class="missionTd">Skapa en pyramid med minst 5 personer</td>
+                        <td class="complete"><input type="checkbox" class="missionCompleted" /></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div id="information">
+                <form id="informationForm">
+                    <h3>Fyll i din information</h3>
+                    <input type="text" id="firstname" asp-for="Firstname" name="Firstname" placeholder="Förnamn" /><span asp-validation-for="Firstname"></span><br />
+                    <input type="text" id="lastname" asp-for="Lastname" name="Lastname" placeholder="Efternamn" /><span asp-validation-for="Lastname"></span><br />
+                    <input onclick="Send()" type="button" value="Skicka in resultat" />
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="usContainer">
+        <h1>Vi som håller i evenemanget</h1>
+        <p></p>
+        <form action="Result" method="get">  
+            <input type="submit" asp-controller="Home" asp-action="Result" value="" />
+        </form>
+    </div>
+
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.16.0/jquery.validate.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/mvc/5.2.3/jquery.validate.unobtrusive.min.js"></script>
+    <script>
+        function UpdateCheckBoxes() {
+            var checkboxes = $('.missionCompleted');
+            var cbsChecked = [];
+            checkboxes.each(function (ind, elem) {
+                cbsChecked.push(checkboxes[ind].checked);
+            });
+
+            for (var i = 0; i < cbsChecked.length; i++) {
+                localStorage.setItem('cb' + i, cbsChecked[i]);
+            }
+        }
+
+        function InitializeCheckBoxes() {
+            var checkboxes = $('.missionCompleted');
+            for (var i = 0; i < checkboxes.length; i++) {
+                var val = localStorage.getItem('cb' + i);
+                if (val == 'true') {
+                    checkboxes[i].checked = true;
+                }
+            }
+            
+        }
+
+        function Results() {
+            $.ajax({
+                type: 'GET',
+                url: 'Home/Result',
+                success: function (result) {
+                    console.log(result);
+                }
+
+            })
+
+        }
+
+        function Send() {
+            var count = 0;
+            var checkboxes = $('.missionCompleted');
+            for (var i = 0; i < checkboxes.length; i++) {
+                if (checkboxes[i].checked == true) {
+                    count++;
+                }
+            }
+            console.log("count" + count);
+            var $inputCount = $('<input />', {
+                id: 'missionCount',
+                type: 'text',
+                hidden: 'hidden',
+                text: count
+            });
+
+            $('#informationForm').append($inputCount);
+            var dataToSend = {
+                Firstname: $('#firstname').val(),
+                Lastname: $('#lastname').val(),
+                CompletedMissions : count
+            }
+
+            $.ajax({
+                type: 'POST',
+                url: 'Home/Index',
+                data: dataToSend,
+                success: function (result) {
+                    console.log(result);
+                }
+
+            })
+
+        }
+
+        $(document).ready(function () {
+            InitializeCheckBoxes();
+            $('#missionsContainer').hide();
+            $('#usContainer').hide();
+
+            $('li').on('click', function () {
+                var target = $(this).attr('id');
+                $('ul li').each(function (ind, elem) {
+                    elem.classList.remove('active');
+                });
+
+                $(this).addClass('active');
+
+                if (target + "Container" == "homeContainer") {
+                    $('#homeContainer').show();
+                    $('#missionsContainer').hide();
+                    $('#usContainer').hide();
+
+                }
+
+                if (target + "Container" == "missionsContainer") {
+                    $('#homeContainer').hide();
+                    $('#missionsContainer').show();
+                    $('#usContainer').hide();
+
+                }
+
+                if (target + "Container" == "usContainer") {
+                    $('#homeContainer').hide();
+                    $('#missionsContainer').hide();
+                    $('#usContainer').show();
+                }
+            });
+
+            $('.missionCompleted').on('click', function () {
+                UpdateCheckBoxes();
+                if ($(this).is(':checked')) {
+                }
+            });
+
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+C:\Projects\Festen\Festen\bin\Debug\netcoreapp1.1\Festen.deps.json
+C:\Projects\Festen\Festen\bin\Debug\netcoreapp1.1\Festen.runtimeconfig.json
+C:\Projects\Festen\Festen\bin\Debug\netcoreapp1.1\Festen.runtimeconfig.dev.json
+C:\Projects\Festen\Festen\bin\Debug\netcoreapp1.1\Festen.dll
+C:\Projects\Festen\Festen\bin\Debug\netcoreapp1.1\Festen.pdb
+C:\Projects\Festen\Festen\obj\Debug\netcoreapp1.1\Festen.csprojResolveAssemblyReference.cache
+C:\Projects\Festen\Festen\obj\Debug\netcoreapp1.1\Festen.AssemblyInfo.cs
+C:\Projects\Festen\Festen\obj\Debug\netcoreapp1.1\Festen.dll
+C:\Projects\Festen\Festen\obj\Debug\netcoreapp1.1\Festen.pdb
