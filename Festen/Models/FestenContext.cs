@@ -28,7 +28,9 @@ namespace Festen.Models
             {
                 return Participant.OrderByDescending(p => p.CompletedMissions).ToList();
             }
-            return null;
+            //Participant p = new Participant { Id = 0, Firstname = "förnamn", Lastname = "efternamn", CompletedMissions = 0 };
+            return new Participant[] { new Participant { Id = 0, Firstname = "förnamn", Lastname = "efternamn", CompletedMissions = 0 } };
+
         }
     }
 }

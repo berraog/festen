@@ -19,13 +19,13 @@ namespace Festen
         public void ConfigureServices(IServiceCollection services)
         {
             //var connStr = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Festen;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
-            var connStr = @"Server=tcp:30arsfesten.database.windows.net,1433;Initial Catalog=Participant;Persist Security Info=False;User ID=berra;Password=BananKakaCitron123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+            var connStr = @"Server=tcp:30arsfesten.database.windows.net,1433;Initial Catalog=Festen;Persist Security Info=False;User ID=berra;Password=BananKakaCitron123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
             services.AddDbContext<FestenContext>(o => o.UseSqlServer(connStr));
             services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)[FantasyFootball]
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
             if (env.IsDevelopment())
             {
